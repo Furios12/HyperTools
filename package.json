@@ -1,0 +1,20 @@
+{
+  "name": "hypercache",
+  "version": "1.0.0",
+  "description": "Svuota la cache di discord",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "HyperStudios",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "child_process": "^1.0.2",
+    "fs-extra": "^11.2.0",
+    "https": "^1.0.0",
+    "pipeline": "^0.1.3",
+    "stream": "^0.0.3",
+    "util": "^0.12.5"
+  }
+}
