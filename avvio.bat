@@ -70,15 +70,17 @@ echo ==========================
 echo 1. Esegui il cleaner
 echo 2. Esegui il reset di Discord
 echo 3. Reinstalla Discord
-echo 4. Esci
+echo 4. Controlla Aggiornamenti
+echo 5. Esci
 echo ==========================
-set /p option="Seleziona un'opzione [1-4]: "
+set /p option="Seleziona un'opzione [1-5]: "
 
 :: Gestisci le opzioni dell'utente
 if "%option%"=="1" goto cleaner
 if "%option%"=="2" goto reset
 if "%option%"=="3" goto reinstall
-if "%option%"=="4" exit /b
+if "%option%"=="4" goto version
+if "%option%"=="5" goto uscita
 
 :: Se l'opzione non è valida
 echo [HyperLauncher] Opzione non valida. Riprova.
@@ -157,3 +159,21 @@ if /i "!fileContent!"=="true" (
         goto MENU
     )
 )
+
+:version
+cls
+echo Avvio HyperUpdater...
+node "%scriptDir%version.js"
+echo Updater Chiuso!
+pause
+goto MENU
+
+
+
+
+:uscita
+cls
+echo Grazie per aver usato HyperTools! Ricordiamo che fino alla versione 2.0 il tool sara in beta
+echo Premi un tasto per uscire
+pause
+exit
